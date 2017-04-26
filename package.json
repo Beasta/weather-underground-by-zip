@@ -1,0 +1,25 @@
+{
+  "name": "weather-underground-by-zip",
+  "version": "1.0.0",
+  "description": "simple weather underground call using zipcode",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "weather",
+    "zipcode",
+    "underground"
+  ],
+  "author": "Barry",
+  "license": "MIT",
+  "dependencies": {
+    "superagent": "^3.5.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.3.0",
+    "should": "^11.2.1",
+    "should-http": "^0.1.1"
+  }
+}
