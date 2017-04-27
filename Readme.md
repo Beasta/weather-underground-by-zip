@@ -12,7 +12,7 @@ npm install weather-underground-by-zip
 ```js
 var weather = require('weather-underground-by-zip');
 var zipcode = 90210;
-weather.request(zipcode, function (err, data) {
+weather().request(zipcode, function (err, data) {
   if (err) { console.error(err) }
   else { console.log(data); }
   // { location: "San Diego, CA", temperature: 74, description: "Cloudy" }
