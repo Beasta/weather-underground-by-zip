@@ -1,6 +1,6 @@
 {
   "name": "weather-underground-by-zip",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "simple weather underground call using zipcode",
   "main": "index.js",
   "scripts": {
