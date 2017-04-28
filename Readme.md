@@ -1,6 +1,6 @@
 # weather-underground-by-zip
  
-Retrieve weather underground data for a specific zipcode
+Retrieve weather underground data for a specific zipcode. No API keys required!
 
 ## Installation
 
