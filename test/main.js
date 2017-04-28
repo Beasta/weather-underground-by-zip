@@ -1,4 +1,4 @@
-var WeatherUnderground = require('../index.js');
+var WeatherUnderground = require('../build/index.js');
 var assert = require('chai').assert;
 describe('WeatherUnderground', function () {
 	describe('.request', function () {
