@@ -1,11 +1,11 @@
 {
   "name": "weather-underground-by-zip",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "simple weather underground call using zipcode",
   "main": "build/index.js",
   "scripts": {
     "test": "npm run babel && mocha",
-    "babel": "babel --presets es2015 index.js -o build/index.js"
+    "babel": "mkdir -p build && babel --presets es2015 index.js -o build/index.js"
   },
   "keywords": [
     "weather",
