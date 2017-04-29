@@ -1,5 +1,6 @@
 # weather-underground-by-zip
- 
+[![Build Status](https://travis-ci.org/Beasta/weather-underground-by-zip.svg?branch=master)](https://travis-ci.org/Beasta/weather-underground-by-zip)
+
 Retrieve weather underground data for a specific zipcode. No API keys required!
 
 ## Installation
