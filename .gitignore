@@ -3,3 +3,5 @@ build
 coverage
 npm-debug.log
 bundle.js
+_chromeit.html
+bundle.js
