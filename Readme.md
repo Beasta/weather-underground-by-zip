@@ -11,6 +11,7 @@ npm install weather-underground-by-zip
 ```
 
 ## Usage
+[RunKit Example with Emoticon](https://runkit.com/590137ff1ce99600127a3fc5/5912b990b038140013ddb899)
 ```js
 var weather = require('weather-underground-by-zip');
 var zipcode = 90210;
