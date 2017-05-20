@@ -6,9 +6,20 @@ const assert = require('chai').assert;
 
 describe('WeatherUnderground', () => {
   describe('.request', () => {
+    it('should return an empty object for an invlaid body', (done) => {
+      const badBodyResponse = WeatherUnderground().ogTitleGet('this is a nonsense body without a proper og:title');
+      assert.deepEqual(badBodyResponse, {});
+      done();
+    });
     it('should return weather data for a valid zipcode', (done) => {
       WeatherUnderground().request(92122, (err, data) => {
         assert.equal(!!data, true);
+        done();
+      });
+    });
+    it('should return an error for an invalid zipcode', (done) => {
+      WeatherUnderground().request(92, (err) => {
+        assert.equal(!!err, true);
         done();
       });
     });

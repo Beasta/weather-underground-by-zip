@@ -1,21 +1,22 @@
 import * as superagent from 'superagent';
 
-const ogTitleGet = (body) => {
-  const regex = /<meta property="og:title" content="([^|]+?) \| ([0-9]+\.[0-9].+) \| ([^"]+?)" \/>/g;
-  const matches = regex.exec(body);
-  if (matches !== null) {
-    return {
-      location: matches[1],
-      temperature: parseFloat(matches[2]),
-      description: matches[3],
-    };
-  }
-  return {};
-};
+
 module.exports = function WeatherUnderground() {
   if (!(this instanceof WeatherUnderground)) {
     return new WeatherUnderground();
   }
+  this.ogTitleGet = (body) => {
+    const regex = /<meta property="og:title" content="([^|]+?) \| ([0-9]+\.[0-9].+) \| ([^"]+?)" \/>/g;
+    const matches = regex.exec(body);
+    if (matches !== null) {
+      return {
+        location: matches[1],
+        temperature: parseFloat(matches[2]),
+        description: matches[3],
+      };
+    }
+    return {};
+  };
   this.request = function (zipcode, callback) {
     if (!zipcode) {
       callback('Must enter a zipcode');
@@ -29,7 +30,7 @@ module.exports = function WeatherUnderground() {
           if (err) {
             callback(err);
           } else {
-            callback(null, ogTitleGet(res.text));
+            callback(null, this.ogTitleGet(res.text));
           }
         });
   };
