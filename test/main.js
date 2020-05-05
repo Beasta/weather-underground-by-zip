@@ -6,9 +6,9 @@ const assert = require('chai').assert;
 
 describe('WeatherUnderground', () => {
   describe('.request', () => {
-    it('should return an empty object for an invlaid body', (done) => {
-      const badBodyResponse = WeatherUnderground().ogTitleGet('this is a nonsense body without a proper og:title');
-      assert.deepEqual(badBodyResponse, {});
+    it('should return an error for an invalid body', (done) => {
+      const badBodyResponse = WeatherUnderground().grabTemperature('this is a nonsense body without a proper og:title');
+      assert.deepEqual(typeof badBodyResponse, 'string' );
       done();
     });
     it('should return weather data for a valid zipcode', (done) => {
