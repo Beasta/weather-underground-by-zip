@@ -5,7 +5,7 @@
   "main": "build/index.js",
   "scripts": {
     "test": "npm run babel && ./node_modules/istanbul/lib/cli.js cover ./node_modules/.bin/_mocha",
-    "babel": "mkdir -p build && babel --presets es2015 index.js -o build/index.js",
+    "babel": "mkdir -p build && babel index.js -o build/index.js",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
   },
   "keywords": [
@@ -19,10 +19,11 @@
     "superagent": "^5.2.2"
   },
   "devDependencies": {
-    "babel-cli": "*",
-    "babel-core": "*",
-    "babel-preset-es2015": "*",
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
     "chai": "*",
+    "core-js": "^3.6.5",
     "coveralls": "*",
     "eslint": "*",
     "eslint-config-airbnb": "*",
