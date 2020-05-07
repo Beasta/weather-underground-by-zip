@@ -3,7 +3,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/Beasta/weather-underground-by-zip/badge.svg?branch=master)](https://coveralls.io/github/Beasta/weather-underground-by-zip?branch=master)
 ![npm](https://img.shields.io/npm/dw/weather-underground-by-zip)
 
-Retrieve weather underground data for a specific zipcode. No API keys required! The name is a misnomer because the app no longer uses Weather Underground.
+Retrieve weather data for a specific zipcode. No API keys required! The name is a misnomer because the app no longer uses Weather Underground.
 ## Installation
 
 ```
