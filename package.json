@@ -1,6 +1,6 @@
 {
   "name": "weather-underground-by-zip",
-  "version": "1.6.1",
+  "version": "1.6.3",
   "description": "simple weather underground call using zipcode",
   "main": "build/index.js",
   "scripts": {
@@ -35,5 +35,13 @@
     "mocha": "*",
     "should": "*",
     "should-http": "*"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Beasta/weather-underground-by-zip.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Beasta/weather-underground-by-zip/issues"
+  },
+  "homepage": "https://github.com/Beasta/weather-underground-by-zip#readme"
 }
