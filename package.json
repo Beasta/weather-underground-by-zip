@@ -16,14 +16,14 @@
   "author": "Barry",
   "license": "MIT",
   "dependencies": {
-    "superagent": "^5.2.2"
+    "superagent": "^5.2.2",
+    "core-js": "^3.6.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "chai": "*",
-    "core-js": "^3.6.5",
     "coveralls": "*",
     "eslint": "*",
     "eslint-config-airbnb": "*",
