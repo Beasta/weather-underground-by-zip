@@ -11,15 +11,13 @@ npm install weather-underground-by-zip
 ```
 
 ## Usage
-[RunKit Example with Emoticon](https://runkit.com/beasta/runkit-npm-weather-underground-by-zip)
+[RunKit Example](https://runkit.com/beasta/5ebc502a2716cb001301c3c2)
 ```js
-var weather = require('weather-underground-by-zip');
-var zipcode = 90210;
-weather().request(zipcode, function (err, data) {
-  if (err) { console.error(err) }
-  else { console.log(data); }
-  // { location: "San Diego, CA", temperature: 74, description: "Cloudy" }
-})
+const weather = require('weather-underground-by-zip')();
+const zipcode = 90210;
+
+await require("util").promisify(weather.request)(zipcode);
+//{description: "Partly cloudy", location: "Beverly Hills, CA", temperature: 68, temperatureUnit: "F"}
 ```
 ## Running the tests
 
