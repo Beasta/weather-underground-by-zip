@@ -1,8 +1,9 @@
 /* global describe */
 /* global it */
 
-const WeatherUnderground = require('../build/index.js');
 const assert = require('chai').assert;
+const nock = require('nock');
+const WeatherUnderground = require('../build/index.js');
 
 describe('WeatherUnderground', () => {
   describe('.request', () => {
@@ -44,6 +45,19 @@ describe('WeatherUnderground', () => {
     it('should return string for a description', (done) => {
       WeatherUnderground().request(92122, (err, data) => {
         assert.isString(data.description);
+        done();
+      });
+    });
+  });
+  describe('404 tests', () => {
+    beforeEach(() => {
+      nock('https://www.google.com')
+        .get('/search')
+        .reply(404);
+    });
+    it('should return an error for a 404', (done) => {
+      WeatherUnderground().request(92122, (err, data) => {
+        assert.equal(!!err, true);
         done();
       });
     });
