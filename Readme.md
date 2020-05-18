@@ -1,6 +1,6 @@
 # weather-underground-by-zip
 [![Build Status](https://travis-ci.org/Beasta/weather-underground-by-zip.svg?branch=master)](https://travis-ci.org/Beasta/weather-underground-by-zip)
-[![Coverage Status](https://coveralls.io/repos/github/Beasta/weather-underground-by-zip/badge.svg?branch=master)](https://coveralls.io/github/Beasta/weather-underground-by-zip?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/Beasta/weather-underground-by-zip/badge.svg?branch=master)](https://coveralls.io/github/Beasta/weather-underground-by-zip?branch=master&kill_cache=1")
 ![npm](https://img.shields.io/npm/dw/weather-underground-by-zip)
 
 Retrieve weather data for a specific zipcode. No API keys required! The name is a misnomer because the app no longer uses Weather Underground.
