@@ -1,7 +1,8 @@
 /* global describe */
 /* global it */
+/* global beforeEach */
 
-const assert = require('chai').assert;
+const { assert } = require('chai');
 const nock = require('nock');
 const WeatherUnderground = require('../build/index.js');
 
@@ -9,7 +10,7 @@ describe('WeatherUnderground', () => {
   describe('.request', () => {
     it('should return an error for an invalid body', (done) => {
       const badBodyResponse = WeatherUnderground().grabTemperature('this is a nonsense body without a proper og:title');
-      assert.deepEqual(typeof badBodyResponse, 'string' );
+      assert.deepEqual(typeof badBodyResponse, 'string');
       done();
     });
     it('should return weather data for a valid zipcode', (done) => {
@@ -56,7 +57,7 @@ describe('WeatherUnderground', () => {
         .reply(404);
     });
     it('should return an error for a 404', (done) => {
-      WeatherUnderground().request(92122, (err, data) => {
+      WeatherUnderground().request(92122, (err) => {
         assert.equal(!!err, true);
         done();
       });
