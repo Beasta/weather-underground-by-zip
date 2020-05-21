@@ -22,7 +22,7 @@ module.exports = function WeatherUnderground() {
     const location = locationPieces.join(' ');
     let description = body.match(infoRegex)[1].split(/[\s]/); // has a random newline
     // example: description = [ 'Tuesday', '12:42', 'PM', 'Sunny' ]
-    description = description.slice(3, description.length).join(" ");
+    description = description.slice(3, description.length).join(' ');
     if (temperature && location && description) {
       return {
         location,
